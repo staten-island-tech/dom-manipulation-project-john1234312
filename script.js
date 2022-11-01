@@ -9,6 +9,11 @@ const DOMSelectors = {
 
 DOMSelectors.addButton.addEventListener("click", function addThisShit(){
     let inputText = DOMSelectors.input.value
-    DOMSelectors.containerBox.insertAdjacentHTML("beforeend", `<p>${inputText}</p>`)
+    DOMSelectors.containerBox.insertAdjacentHTML("beforeend", `<div class="inputDiv">${inputText}</div>`)
+    DOMSelectors.input.value = ''
     }
 )
+
+DOMSelectors.deleteButton.addEventListener("click", function delete() {
+    let addedDiv = document.querySelector(.inputDiv)
+} )
