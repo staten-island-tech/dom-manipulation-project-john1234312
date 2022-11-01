@@ -14,6 +14,6 @@ DOMSelectors.addButton.addEventListener("click", function addThisShit(){
     }
 )
 
-DOMSelectors.deleteButton.addEventListener("click", function delete() {
-    let addedDiv = document.querySelector(.inputDiv)
+DOMSelectors.deleteButton.addEventListener("click", function deleteThisShit(){
+    DOMSelectors.containerBox.remove(DOMSelectors.containerBox[-1])
 } )
