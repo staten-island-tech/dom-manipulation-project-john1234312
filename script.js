@@ -4,7 +4,8 @@ const DOMSelectors = {
     clearButton: document.getElementById("clearnBtn"),
     containerBox: document.getElementById("container"),
     text: document.getElementById("randomText"),
-    input: document.getElementById("input")
+    input: document.getElementById("input"),
+    addedDiv: document.querySelector(".inputDiv")
 }
 
 DOMSelectors.addButton.addEventListener("click", function addThisShit(){
@@ -14,6 +15,6 @@ DOMSelectors.addButton.addEventListener("click", function addThisShit(){
     }
 )
 
-DOMSelectors.deleteButton.addEventListener("click", function deleteThisShit(){
-    DOMSelectors.containerBox.remove(DOMSelectors.containerBox[-1])
-} )
+DOMSelectors.deleteButton.addEventListener("click", function deleteThisShit() {
+    DOMSelectors.addedDiv.removeChild([-1])
+})
