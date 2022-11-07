@@ -5,16 +5,16 @@ const DOMSelectors = {
     containerBox: document.getElementById("container"),
     text: document.getElementById("randomText"),
     input: document.getElementById("input"),
-    addedDiv: document.querySelector(".inputDiv")
+    addedDivs: document.getElementById("inputdiv")
 }
 
-DOMSelectors.addButton.addEventListener("click", function addThisShit(){
+DOMSelectors.addButton.addEventListener("click", function addThis(){
     let inputText = DOMSelectors.input.value
-    DOMSelectors.containerBox.insertAdjacentHTML("beforeend", `<div class="inputDiv">${inputText}</div>`)
+    DOMSelectors.containerBox.insertAdjacentHTML("beforeend", `<div id="inputDiv">${inputText}</div>`)
     DOMSelectors.input.value = ''
     }
 )
 
-DOMSelectors.deleteButton.addEventListener("click", function deleteThisShit() {
-    DOMSelectors.addedDiv.removeChild([-1])
-})
+DOMSelectors.deleteButton.addEventListener("click", function deleteThis(){
+    DOMSelectors.containerBox.remove(DOMSelectors.addedDivs[-1])
+} )
