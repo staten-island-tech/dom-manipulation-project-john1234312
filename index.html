@@ -5,24 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet"></link>
     <title>Document</title>
-</head>
-<body>
-    <div>
-        <div id="container">
-            <div class="additionMenu">
-                <input type="text" id="input"/>
-                <button class="btn" id="addBtn" >Add</button>
-            </div>
-            <button class="btn" id="deleteBtn"> remove </button>
-            <button class="btn" id="clearBtn"> Clear </button>
-            <script src="script.js"></script>
-            <p id="randomText">me when bruh</p>
+        <h1>What Are You Listening To?</h1>
+        <section class="form-parent">
+            <form id="form">
+                <div class="form-inputs">
+                    <div id="title">
+                        <label for="title">Album Name</label>
+                        <input type="text" id="title" class="text-box" required>
+                    </div>
+                    <div id="artist">
+                        <label for="artist">Artist</label>
+                        <input type="text" id="artist" class="text-box" required>
+                    </div>
+                    <div id="url">
+                        <label for="url">Enter Image URL Here</label>
+                        <input type="text" id="url" class="text-box" required>
+                    </div>
+                </div>
+                <div class="hero-form-input">
+                    <input type="submit" value="Submit" class="btn">
+                </div>
+            </form>
+        </section>
+        <section class="display" id="display">
+            <!-- <div class="display-card">
+                <img class="display-img" src="https://www.gannett-cdn.com/presto/2019/08/08/USAT/dc1fe9c6-d585-42c4-9c69-e31cc46e4c94-ABBEY_ROAD.JPG?auto=webp&crop=1481,834,x0,y265&format=pjpg&width=1200"/>
+                <h2 class="display-artist">Beatles</h2>
+                <h3 class="display-album">Abbey Road</h3>
+                 <button class="remove btn">Remove Album</button>
+            </div> -->
+        </section>
+        <div id="addedDivs">
         </div>
-        <button class="btn" id="deleteBtn"> remove </button>
-        <button class="btn" id="clearBtn"> Clear </button>
-        <p id="randomText">me when bruh</p>
-        <div id="container"></div>
-        <script src="script.js"></script>
-    </div>
-</body>
+        <script src="script.js" type="module"></script>
+    </body>
 </html>

@@ -1,20 +1,20 @@
 const DOMSelectors = {
-    addButton: document.getElementById("addBtn"),
-    deleteButton: document.getElementById("deleteBtn"),
-    clearButton: document.getElementById("clearnBtn"),
-    containerBox: document.getElementById("container"),
-    text: document.getElementById("randomText"),
-    input: document.getElementById("input"),
-    addedDiv: document.querySelector(".inputDiv")
+    input: document.getElementById("form"),
+    artist: document.getElementById("artist"),
+    title: document.getElementById("title"),
+    url: document.getElementById("url"),
+    addedDivs: document.getElementById("addedDivs")
 }
 
-DOMSelectors.addButton.addEventListener("click", function addThisShit(){
-    let inputText = DOMSelectors.input.value
-    DOMSelectors.containerBox.insertAdjacentHTML("beforeend", `<div class="inputDiv">${inputText}</div>`)
-    DOMSelectors.input.value = ''
-    }
-)
 
-DOMSelectors.deleteButton.addEventListener("click", function deleteThisShit() {
-    DOMSelectors.addedDiv.removeChild([-1])
+
+DOMSelectors.input.addEventListener('submit', function addCard() {
+    let chosenArtist = DOMSelectors.artist.value
+    let chosenTitle = DOMSelectors.title.value
+    let chosenUrl = DOMSelectors.url.value
+    DOMSelectors.addedDivs.insertAdjacentHTML(
+        'beforeend',
+        '<div id=NewCard></div>'
+            '<p></p>'
+    )
 })
