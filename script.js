@@ -22,31 +22,21 @@ function remove(){
     })
 }
 
-DOMSelectors.input.addEventListener('submit', function addCard() {
+DOMSelectors.input.addEventListener('submit', function addCard(event) {
+    event.preventDefault()
     let chosenArtist = DOMSelectors.artist.value
     let chosenTitle = DOMSelectors.title.value
     let chosenUrl = DOMSelectors.url.value
     DOMSelectors.addedDivs.insertAdjacentHTML(
         'beforeend',
         `<div class="NewCard">
-            <img 
-                class="displayPicture" 
-                src="${chosenUrl}}"
-            />
-            <h2 
-                class="displayArtist"> 
-                ${chosenArtist}
-            />
-            <h3
-                class="displayTitle">
-                ${chosenTitle}
-            />
-            <button 
-                class="removeBtn">
-                Remove Music
-            </button>
-        </div>;`
+            <img class="displayPicture" src="${chosenUrl}">
+            <h2 class="displayArtist">${chosenArtist}</h2>
+            <h3 class="displayTitle">${chosenTitle}</h3>
+            <button class="removeBtn">Remove Music</button>
+        </div>`
         );
         clearFields()
         remove()
+        
     })
