@@ -3,14 +3,13 @@ const DOMSelectors = {
     artist: document.getElementById("artist"),
     title: document.getElementById("title"),
     url: document.getElementById("url"),
-    addedDivs: document.getElementById("addedDivs")
+    addedDivs: document.getElementById("addedDivs"),
 }
 
 function clearFields(){
     DOMSelectors.url.value=""
     DOMSelectors.title.value=""
-    DOMSelectors.artist.value=""
-}
+    DOMSelectors.artist.value=""}
 
 function remove(){
     let removeBtn = 
@@ -29,7 +28,7 @@ DOMSelectors.input.addEventListener('submit', function addCard(event) {
     let chosenUrl = DOMSelectors.url.value
     DOMSelectors.addedDivs.insertAdjacentHTML(
         'beforeend',
-        `<div class="NewCard">
+        `<div class="newCard">
             <img class="displayPicture" src="${chosenUrl}">
             <h2 class="displayArtist">${chosenArtist}</h2>
             <h3 class="displayTitle">${chosenTitle}</h3>
@@ -38,5 +37,4 @@ DOMSelectors.input.addEventListener('submit', function addCard(event) {
         );
         clearFields()
         remove()
-        
     })

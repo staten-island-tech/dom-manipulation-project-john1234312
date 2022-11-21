@@ -1,0 +1,17 @@
+html, body, * {
+    font-family: 'Times New Roman', Times, serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+.newCard {
+    border: .5rem solid red;
+    flex-wrap: wrap;
+    max-width: 34%;
+}
+
+.displayArtist {
+    font-size: 2rem;
+}
