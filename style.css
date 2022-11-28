@@ -6,12 +6,40 @@ html, body, * {
     font-size: 62.5%;
 }
 
-.newCard {
-    border: .5rem solid red;
-    flex-wrap: wrap;
-    max-width: 34%;
+.newCard {   
+    width: 15%;
+    text-align: center;
+    justify-content: space-around;
 }
 
 .displayArtist {
     font-size: 2rem;
+}
+
+h1 {
+    font-size: 5rem;
+    width: 100%;
+    text-align: center;
+}
+
+#form {
+    
+    font-size: 5rem;
+}
+
+.displayArtist, .displayTitle, .removeBtn {
+    font-size: 3rem;
+}
+
+#addedDivs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 100%;
+}
+
+img {
+    width: 20rem;
+    height: 20rem;
 }
